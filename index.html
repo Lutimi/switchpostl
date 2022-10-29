@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <nav class="px-2 py-2 bg-primary  dark:bg-gray-900 dark:">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="resources/images/image 4.svg" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo">
+                <span
+                    class="self-center text-xl font-semibold whitespace-nowrap text-white dark:text-white">SWITCH</span>
+            </a>
+
+            <div class="flex space-x-2 ">
+                <button data-collapse-toggle="mobile-menu" type="button"
+                    class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-emerald-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6 fill-white" aria-hidden="true" fill="fill-white " viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button class="md:hidden" data-collapse-toggle="mobile-menu" type="button" ">
+                    <img class=" fill-white w-6 h-6 " src=" resources/images/logout.svg" alt="">
+                </button>
+            </div>
+
+            <div class="hidden w-full bg-primary md:block md:w-auto " id="mobile-menu">
+                <ul
+                    class="flex  p-4 mt-4 md:bg-primary sm:bg-white rounded-lg 
+                    md:text-white sm:text-primary  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  md:bg-primary ">
+                    <li>
+                        <!-- <a href="#"
+                            class="block py-2 pr-4 pl-3 text-white bg-primary rounded md:bg-transparent md:text-white md:p-0 md:dark:text-white dark:bg-emerald-600 md:dark:bg-transparent"
+                            aria-current="page">Home</a> -->
+                        <button type="button " class="hidden md:block">
+                            <img class=" fill-white w-6 h-6 " src="resources/images/logout.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-primary md:text-white  rounded hover:bg-primary hover:text-white md:hover:bg-primary md:border-0 md:hover:text-primary md:p-0 md:w-auto md:dark:hover:bg-emerald-900">Dropdown
+                            <svg class="ml-1 w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg></button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="hidden z-10 w-64 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                            data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom"
+                            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                                aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Plug
+                                        Inn</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">BODEGA
+                                        PRINCIPAL</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">TERMINAL:
+                                        SIN TERMINAL</a>
+                                </li>
+                            </ul>
+                            <div class="py-1">
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">0001
+                                </a>
+                            </div>
+                            <div class="py-1">
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">0001
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class=" py-4 bg-green-200 container  mx-auto grid gap-16 grid-cols-2 ">
+
+            <!-- Primera columna -->
+            <div class="flex flex-col space-y-4 bg-red-200">
+                <form>
+                    <label for="default-search"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Buscar</label>
+                    <div class="relative">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-emerald-900 focus:border-emerald-500 dark:bg-gray-700 "
+                            placeholder="Buscar..." required="">
+                        <button type="submit"
+                            class="text-white bg-primary absolute right-2.5 bottom-2.5  hover:bg-primary focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2 ">Buscar</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="flex flex-col space-y-4 bg-red-200">
+                <button>
+                    buscar
+                </button>
+            </div>
+
+            <!-- ... -->
+        </div>
+    </section>
+
+    <!-- <h1 class="text-4xl bg-primary ">asdsad</h1> -->
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+
+</html>
