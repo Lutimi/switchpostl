@@ -5,3 +5,10 @@
 .card{
     @apply bg-white rounded hover:bg-gray-100 flex justify-center flex-col items-center p-2 overflow-hidden shadow-md relative;
 }
+.scard{
+    @apply bg-white rounded p-4 shadow-md ;
+}
+
+.oc-h-screen {
+    max-height: 80vh;
+  }
