@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.card{
-    @apply bg-white rounded hover:bg-gray-100 flex justify-center flex-col items-center p-2 overflow-hidden shadow-md relative;
+.card {
+  @apply bg-white rounded hover:bg-gray-100 flex justify-center flex-col items-center p-2 overflow-hidden shadow-md relative;
 }
-.scard{
-    @apply bg-white rounded p-4 shadow-md ;
+.scard {
+  @apply bg-white rounded p-4 shadow-md;
 }
 
 .oc-h-screen {
-    max-height: 80vh;
-  }
+  max-height: 80vh;
+}
+
+.btn1 {
+  @apply w-full text-base px-6  shadow-md py-2  bg-white font-medium hover:bg-primary hover:text-white;
+}
