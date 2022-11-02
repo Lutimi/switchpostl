@@ -1060,16 +1060,32 @@ input[type="range"]::-ms-fill-lower {
   height: 1px;
 }
 
-.h-3 {
-  height: 0.75rem;
-}
-
 .h-8 {
   height: 2rem;
 }
 
 .h-full {
   height: 100%;
+}
+
+.max-h-\[24rem\] {
+  max-height: 24rem;
+}
+
+.max-h-\[\] {
+  max-height: ;
+}
+
+.max-h-\[90\] {
+  max-height: 90;
+}
+
+.max-h-\[90\%\] {
+  max-height: 90%;
+}
+
+.max-h-\[70\%\] {
+  max-height: 70%;
 }
 
 .min-h-screen {
@@ -1108,8 +1124,16 @@ input[type="range"]::-ms-fill-lower {
   width: 11rem;
 }
 
-.w-3 {
-  width: 0.75rem;
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.w-1\/12 {
+  width: 8.333333%;
 }
 
 .w-8 {
@@ -1124,8 +1148,8 @@ input[type="range"]::-ms-fill-lower {
   flex-shrink: 0;
 }
 
-.table-fixed {
-  table-layout: fixed;
+.flex-shrink {
+  flex-shrink: 1;
 }
 
 .transform {
@@ -1146,10 +1170,6 @@ input[type="range"]::-ms-fill-lower {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-center {
@@ -1211,6 +1231,18 @@ input[type="range"]::-ms-fill-lower {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-y-clip {
+  overflow-y: clip;
 }
 
 .overflow-y-scroll {
@@ -1810,8 +1842,12 @@ input[type="range"]::-ms-fill-lower {
 }
 
 @media (min-width: 480px) {
-  .sm\:h-10 {
-    height: 2.5rem;
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
   }
 
   .sm\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
