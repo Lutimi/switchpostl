@@ -14,5 +14,8 @@
 }
 
 .btn1 {
-  @apply w-full text-base px-6  shadow-md py-2  bg-white font-medium hover:bg-primary hover:text-white;
+  @apply flex flex-grow text-base px-6  shadow-md py-2  bg-white font-medium hover:bg-primary hover:text-white;
+}
+.btn12 {
+  @apply  text-base px-6  shadow-md py-2  bg-white font-medium hover:bg-primary hover:text-white;
 }

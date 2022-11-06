@@ -251,7 +251,7 @@
 
             </div>
             <!-- Factura -->
-            <div class=" w-full flex flex-col space-y-4 scard col-span-4 ">
+            <div class=" relative  flex flex-col space-y-4 scard col-span-4 ">
                 <div class="flex justify-between ">
                     <p class="text-primary text-2xl ">Factura</p>
                     <button type="button"
@@ -341,7 +341,7 @@
 
 
                     <!-- Table   -->
-                    <div class=" max-h-[24rem]  overflow-y-auto overflow-x-auto relative shadow-md sm:rounded-lg">
+                    <div class=" max-h-[24rem]  overflow-y-auto overflow-x-auto relative  sm:rounded-lg">
                         <table class="w-full   text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead
                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -709,132 +709,138 @@
                             </tbody>
                         </table>
                     </div>
-
-
-
-
                 </div>
 
 
-                <div class="h-[1px] bg-gray-200">
-                </div>
+                <!-- <div class="h-[1px] bg-gray-200">
+                </div> -->
 
-                <div class="flex flex-col space-y-4 ">
+                <!-- CARD Checkout -->
+                <div
+                    class=" absolute bottom-0 w-full flex flex-col flex-grow space-y-4    index-99 px-6 shadow-sm bg-white    py-4  ">
 
-                    <div class="flex justify-between ">
-                        <h1 class="font-bold">CANT. PRODUCTOS</h1>
-                        <h1 class="">23</h1>
-                    </div>
-
-
-
-                    <!-- input -->
-                    <div class="flex justify-between ">
-                        <h1 class="font-bold">Subtotal</h1>
-                        <h1>$1331.98</h1>
-                    </div>
+                    <!-- Texto -->
+                    <div class="flex flex-col space-y-2 ">
+                        <!-- <div class="h-[1px] bg-gray-200">
+                        </div> -->
+                        <div class="flex justify-between ">
+                            <h1 class="font-bold">CANT. PRODUCTOS</h1>
+                            <h1 class="">23</h1>
+                        </div>
 
 
-                    <!--  -->
-                    <div class="flex justify-between items-center">
-                        <h1 class="font-bold">DESCUENTO GLOBAL</h1>
-                        <div class=" flex rounded-xl justify-end  red-300">
 
-                            <form>
-                                <div class="flex">
-                                    <label for="search-dropdown"
-                                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your
-                                        Email</label>
-                                    <button id="dropdown-button" data-dropdown-toggle="dropdown3" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border
-                                         border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 
-                                         " type="button">% </button>
+                        <!-- input -->
+                        <div class="flex justify-between ">
+                            <h1 class="font-bold">Subtotal</h1>
+                            <h1>$1331.98</h1>
+                        </div>
 
-                                    <div class="relative w-full">
-                                        <input type="search" id="search-dropdown"
-                                            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
-                                            placeholder="0" required="">
 
+                        <!--  -->
+                        <div class="flex justify-between items-center">
+                            <h1 class="font-bold">DESCUENTO GLOBAL</h1>
+                            <div class=" flex rounded-xl justify-end  red-300">
+
+                                <form>
+                                    <div class="flex">
+                                        <label for="search-dropdown"
+                                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your
+                                            Email</label>
+                                        <button id="dropdown-button" data-dropdown-toggle="dropdown3" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border
+                             border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 
+                             " type="button">% </button>
+
+                                        <div class="relative w-full">
+                                            <input type="search" id="search-dropdown"
+                                                class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
+                                                placeholder="0" required="">
+
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
 
-                        </div>
-                    </div>
-
-
-                    <div class="flex justify-between ">
-                        <h1 class="font-bold text-sm">I.T.B.M.S.</h1>
-                        <h1>$0.00</h1>
-                    </div>
-                </div>
-                <div>
-                    <div class="grid grid-cols-5 space-x-4 justify-between">
-
-                        <div class="  col-span-2 flex justify-between space-x-4 md:space-x-6 lg:space-x-12 ">
-
-                            <button type="button"
-                                class="bg-gray-500 rounded-md 
-                            px-4 py-1 flex-auto
-                             text-white hover:text-gray-500 flex text-center justify-center hover:bg-gray-100 focus:outline-none ">
-                                <span class="sr-only">Close menu</span>
-                                <!-- Heroicon name: outline/x -->
-                                <svg class="h-10 w-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
-                                    <path
-                                        d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
-                                </svg>
-
-                            </button>
-
-
-                            <button type="button" class="flex-auto flex text-center bg-red-700 rounded-md 
-                            px-4 py-2  items-center justify-center
-                                 text-white hover:text-gray-500 hover:bg-gray-100 ">
-                                <span class="sr-only">Close menu</span>
-                                <!-- Heroicon name: outline/x -->
-                                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
+                            </div>
                         </div>
 
 
-                        <button
-                            class="flex col-span-3 justify-between   hover:bg-emerald-900 px-4 lg:px-8 py-2 text-2xl text-white bg-primary rounded-lg ">
-                            <div> Pagar</div>
-                            <div> $999</div>
+                        <div class="flex justify-between ">
+                            <h1 class="font-bold text-sm">I.T.B.M.S.</h1>
+                            <h1>$0.00</h1>
+                        </div>
+                    </div>
+
+                    <!-- x pagar -->
+                    <div>
+                        <div class="grid grid-cols-5 space-x-4 justify-between">
+
+                            <div class="  col-span-2 flex justify-between space-x-4 md:space-x-6 lg:space-x-12 ">
+
+                                <button type="button" class="bg-gray-500 rounded-md 
+                px-4 py-1 flex-auto
+                 text-white hover:text-gray-500 flex text-center justify-center hover:bg-gray-100 focus:outline-none ">
+                                    <span class="sr-only">Close menu</span>
+                                    <!-- Heroicon name: outline/x -->
+                                    <svg class="h-10 w-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                                    </svg>
+
+                                </button>
+
+
+                                <button type="button" class="flex-auto flex text-center bg-red-700 rounded-md 
+                px-4 py-2  items-center justify-center
+                     text-white hover:text-gray-500 hover:bg-gray-100 ">
+                                    <span class="sr-only">Close menu</span>
+                                    <!-- Heroicon name: outline/x -->
+                                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+
+                            <button
+                                class="flex col-span-3 justify-between   hover:bg-emerald-900 px-4 lg:px-8 py-2 text-2xl text-white bg-primary rounded-lg ">
+                                <div> Pagar</div>
+                                <div> $999</div>
+                            </button>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- botones -->
+                    <div class=" relative bg-white shadow-md rounded-2xl w-full flex flex-wrap justify-between ">
+                        <button class="btn1 rounded-l-xl">
+                            Factura
+                        </button>
+                        <button class="btn1">
+                            Pedido
+                        </button>
+                        <button class="btn1">
+                            Abono
+                        </button>
+                        <button class="btn1">
+                            Cotización
+                        </button>
+                        <button class="btn1">
+                            Crédito
+                        </button>
+                        <button class="btn1 rounded-r-xl">
+                            C.Regalo
                         </button>
 
-
-
                     </div>
-
                 </div>
 
-                <!-- botones -->
-                <div class=" relative bg-white shadow-md rounded-2xl w-full flex  justify-between ">
-                    <button class="btn1 rounded-l-xl">
-                        <h1>Factura</h1>
-                    </button>
-                    <button class="btn1">
-                        <h1> Pedido</h1>
-                    </button>
-                    <button class="btn1">
-                        <h1>Abono</h1>
-                    </button>
-                    <button class="btn1">
-                        <h1>Cotización</h1>
-                    </button>
-                    <button class="btn1">
-                        <h1>Crédito</h1>
-                    </button>
-                    <button class="btn1 rounded-r-xl">
-                        <h1> C.Regalo</h1>
-                    </button>
 
-                </div>
             </div>
 
 
