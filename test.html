@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
@@ -471,13 +471,13 @@
             </div>
         </div>
     </div>
-    <!-- Extra Large COMPROBANTE Modal -->
+    <!-- Extra Large Lista Clientes Modal -->
     <div id="Listaclientes" tabindex="-1"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center"
         aria-hidden="true">
         <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="relative  rounded-lg shadow  bg-white overflow-y-auto dark:bg-gray-700">
                 <!-- Modal header -->
                 <div class="flex justify-between  p-5 rounded-t border-b dark:border-gray-600">
                     <h3 class="text-xl font-medium text-gray-900 dark:text-white">
@@ -512,8 +512,8 @@
                         <li class="mr-2" role="presentation">
                             <button
                                 class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"
-                                id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
-                                aria-controls="dashboard" aria-selected="false">Nuevos Cliente</button>
+                                id="dashboard-tab" data-tabs-target="#nuevoCliente" type="button" role="tab"
+                                aria-controls="nuevoCliente" aria-selected="false">Nuevo Cliente</button>
                         </li>
                         <li class="mr-2" role="presentation">
                             <button
@@ -761,26 +761,471 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="hidden p-4  rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel"
-                        aria-labelledby="dashboard-tab">
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                    <div class="hiddens p-4  h-1/2 rounded-lg dark:bg-gray-800" id="nuevoCliente" role="tabpanel"
+                        aria-labelledby="ncliente-tab">
+
+                        <!-- Nuevo Cliente -->
+                        <div class=" mx-auto   ">
+                            <div class="mt-10 sm:mt-0">
+                                <div class="flex items-center justify-center w-full  mx-auto ">
+                                    <!-- Nuevo Cliente -->
+                                    <div class="grid grid-cols mx-auto max-w-7xl overflow-y-auto "
+                                        style="height: 600px;">
+                                        <div class="mt-10 sm:mt-0">
+                                            <div class="md:grid  md:gap-6">
+
+                                                <div class="mt-5 md:mt-0 md:col-span-2">
+                                                    <form action="" method="POST">
+                                                        <div class="shadow overflow-hidden sm:rounded-md">
+                                                            <div class="px-4 py-5 bg-white sm:p-6">
+                                                                <div class="grid grid-cols-6 gap-6">
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Nombre
+                                                                        </label>
+
+                                                                        <input type="text" name="first_name"
+                                                                            id="first_name" autocomplete="given-name"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Código</label>
+                                                                        <input type="text" name="first_name"
+                                                                            id="first_name" autocomplete="off"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Nombre
+                                                                            Contacto</label>
+
+                                                                        <input type="text" name="first_name"
+                                                                            id="first_name" autocomplete="given-name"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="email_address"
+                                                                            class="block text-sm font-medium text-gray-700">Correo
+                                                                            electrónico</label>
+                                                                        <input type="text" name="email_address"
+                                                                            id="email_address" autocomplete="email"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Razón
+                                                                            Social</label>
+                                                                        <input type="text" name="razon_social"
+                                                                            id="razon_social" autocomplete="given-name"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Teléfono</label>
+                                                                        <div class="flex space-x-2 ">
+                                                                            <input type="text" name="countrycode"
+                                                                                id="countrycode"
+                                                                                autocomplete="given-name"
+                                                                                placeholder="+507"
+                                                                                class="mt-1 w-1/4 flex-shrink focus:ring-indigo-500 focus:border-indigo-500   shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                            <input type="text" name="Telefono"
+                                                                                id="Telefono" autocomplete="given-name"
+                                                                                class="mt-1 flex flex-grow focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="country"
+                                                                            class="block text-sm font-medium text-gray-700">Tipo
+                                                                            Cliente</label>
+                                                                        <select id="Tipo_Cliente" name="Tipo_Cliente"
+                                                                            autocomplete="Tipo_Cliente"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>Consumidor Final</option>
+                                                                            <option>Gobierno</option>
+                                                                            <option>Extranjero</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="country"
+                                                                            class="block text-sm font-medium text-gray-700">Sexo</label>
+                                                                        <select id="Sexo" name="Sexo"
+                                                                            autocomplete="Sexo"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>Masculino</option>
+                                                                            <option>Femenimo</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Dirección
+                                                                            Corta</label>
+                                                                        <input type="text" name="Direccion_corta"
+                                                                            id="Direccion_corta"
+                                                                            autocomplete="Direccion_corta"
+                                                                            placeholder="Jr,calle"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+
+
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="country"
+                                                                            class="block text-sm font-medium text-gray-700">País
+                                                                        </label>
+                                                                        <select id="Pais" name="Pais"
+                                                                            autocomplete="Pais"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>Panama </option>
+                                                                            <option>Costa rica</option>
+                                                                            <option>Colombia</option>
+                                                                            <option>Guatemala</option>
+                                                                            <option>México</option>
+                                                                            <option>El Salvador</option>
+                                                                            <option>Venezuela</option>
+                                                                            <option>Perú</option>
+                                                                            <option>Hondura</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="country"
+                                                                            class="block text-sm font-medium text-gray-700">Provincia
+                                                                        </label>
+                                                                        <select id="Provincia" name="Provincia"
+                                                                            autocomplete="Provincia"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>1 </option>
+                                                                            <option>2 </option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="country"
+                                                                            class="block text-sm font-medium text-gray-700">Distrito
+                                                                        </label>
+                                                                        <select id="Distrito" name="Distrito"
+                                                                            autocomplete="Distrito"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>1 </option>
+                                                                            <option>2 </option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="country"
+                                                                            class="block text-sm font-medium text-gray-700">Corregimiento
+                                                                        </label>
+                                                                        <select id="Distrito" name="Distrito"
+                                                                            autocomplete="Distrito"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>1 </option>
+                                                                            <option>2 </option>
+                                                                            <option>3</option>
+                                                                            <option>4</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="first_name"
+                                                                            class="block text-sm font-medium text-gray-700">Identificación</label>
+                                                                        <div class="flex space-x-2 ">
+                                                                            <select id="Persona" name="Persona"
+                                                                                autocomplete="Persona"
+                                                                                class="w-1/3 flex-shrink mt-1 block  py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none
+                                                                                 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                                <option>Natural </option>
+                                                                                <option>Jurídica</option>
+
+                                                                            </select>
+                                                                            <input type="text" name="Identificacion"
+                                                                                id="Identificacion"
+                                                                                autocomplete="Identificacion"
+                                                                                class="mt-1 flex flex-grow focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="last_name"
+                                                                            class="block text-sm font-medium text-gray-700">
+                                                                            DV </label>
+                                                                        <input type="text" name="DV" id="DV"
+                                                                            autocomplete="DV"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+
+
+
+
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="Impuesto"
+                                                                            class="block text-sm font-medium text-gray-700">Impuesto
+                                                                            Cliente</label>
+                                                                        <select id="Impuesto" name="Impuesto"
+                                                                            autocomplete="Impuesto"
+                                                                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                            <option>Regular</option>
+                                                                            <option>Exento</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="Limite"
+                                                                            class="block text-sm font-medium text-gray-700">
+                                                                            Límite de crédito </label>
+                                                                        <input type="text" name="Limite" id="Limite"
+                                                                            autocomplete=" Limite" placeholder="0.00"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-3">
+                                                                        <label for="Limite"
+                                                                            class="block text-sm font-medium text-gray-700">
+                                                                            Tiempo de Morosidad </label>
+                                                                        <input type="text" name="Tiempo" id="Tiempo"
+                                                                            autocomplete=" Tiempo" placeholder="0"
+                                                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                    </div>
+                                                                    <div class="col-span-6 sm:col-span-6">
+                                                                        <label for="about"
+                                                                            class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Otras
+                                                                            reseñas</label>
+                                                                        <div class="mt-1 sm:col-span-2 sm:mt-0">
+                                                                            <textarea id="about" name="about" rows="3"
+                                                                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="px-4 py-3  text-right sm:px-6">
+                                                                <button type="submit"
+                                                                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                                    Guardar
+                                                                </button>
+
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
                     </div>
                     <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel"
                         aria-labelledby="settings-tab">
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Settings tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                        <div class="flex items-center justify-center w-full mx-auto h-full">
+                            <!-- Nuevo Cliente -->
+                            <div class="grid grid-cols-  mx-auto max-w-7xl  overflow-y-auto ">
+                                <div class="mt-10 sm:mt-0">
+                                    <div class="md:grid  md:gap-6">
+
+                                        <div class="mt-5 md:mt-0 md:col-span-2">
+                                            <form action="" method="POST">
+                                                <div class="shadow overflow-hidden sm:rounded-md">
+                                                    <div class="px-4 py-5 bg-white sm:p-6">
+                                                        <div class="grid grid-cols-6 gap-6">
+                                                            <div class="col-span-6 sm:col-span-3">
+                                                                <label for="first_name"
+                                                                    class="block text-sm font-medium text-gray-700">Nombre
+                                                                </label>
+
+                                                                <input type="text" name="first_name" id="first_name"
+                                                                    autocomplete="given-name"
+                                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+
+                                                            </div>
+
+
+                                                            <div class="col-span-6 sm:col-span-3">
+                                                                <label for="first_name"
+                                                                    class="block text-sm font-medium text-gray-700">Razón
+                                                                    Social</label>
+                                                                <input type="text" name="razon_social" id="razon_social"
+                                                                    autocomplete="given-name"
+                                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                            </div>
+
+                                                            <div class="col-span-6 sm:col-span-6">
+                                                                <label for="country"
+                                                                    class="block text-sm font-medium text-gray-700">Tipo
+                                                                    Cliente</label>
+                                                                <select id="Tipo_Cliente" name="Tipo_Cliente"
+                                                                    autocomplete="Tipo_Cliente"
+                                                                    class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                    <option>Consumidor Final</option>
+                                                                    <option>Gobierno</option>
+                                                                    <option>Extranjero</option>
+                                                                </select>
+                                                            </div>
+
+
+                                                            <div class="col-span-6 sm:col-span-6">
+                                                                <label for="first_name"
+                                                                    class="block text-sm font-medium text-gray-700">Identificación</label>
+                                                                <div class="flex space-x-2 ">
+                                                                    <select id="Persona" name="Persona"
+                                                                        autocomplete="Persona"
+                                                                        class="w-1/3 flex-shrink mt-1 block  py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none
+                                                                         focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                        <option>Natural </option>
+                                                                        <option>Jurídica</option>
+
+                                                                    </select>
+                                                                    <input type="text" name="Identificacion"
+                                                                        id="Identificacion"
+                                                                        autocomplete="Identificacion"
+                                                                        class="mt-1 flex flex-grow focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-span-6 sm:col-span-6">
+                                                                <label for="last_name"
+                                                                    class="block text-sm font-medium text-gray-700">
+                                                                    DV </label>
+                                                                <input type="text" name="DV" id="DV" autocomplete="DV"
+                                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                            </div>
+
+                                                            <div class="col-span-6 sm:col-span-6">
+                                                                <label for="email_address"
+                                                                    class="block text-sm font-medium text-gray-700">Correo
+                                                                    electrónico</label>
+                                                                <input type="text" name="email_address"
+                                                                    id="email_address" autocomplete="email"
+                                                                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="px-4 py-3  bg-white text-right sm:px-6">
+                                                        <button type="submit"
+                                                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium 
+                                                            rounded-md text-white bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                            Guardar
+                                                        </button>
+
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                     <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel"
                         aria-labelledby="contacts-tab">
-                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong
-                                class="font-medium text-gray-800 dark:text-white">Contacts tab's associated
-                                content</strong>. Clicking another tab will toggle the visibility of this one for the
-                            next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                        <div class="grid grid-cols-  mx-auto max-w-7xl  overflow-y-auto ">
+                            <div class="mt-10 sm:mt-0">
+                                <div class="md:grid  md:gap-6">
+
+                                    <div class="mt-5 md:mt-0 md:col-span-2">
+                                        <form action="" method="POST">
+                                            <div class="shadow overflow-hidden sm:rounded-md">
+                                                <div class="px-4 py-5 bg-white sm:p-6">
+                                                    <div class="grid grid-cols-6 gap-6">
+                                                        <div class="col-span-6 sm:col-span-3">
+                                                            <label for="first_name"
+                                                                class="block text-sm font-medium text-gray-700">Nombre
+                                                            </label>
+
+                                                            <input type="text" name="first_name" id="first_name"
+                                                                autocomplete="given-name"
+                                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+
+                                                        </div>
+
+
+                                                        <div class="col-span-6 sm:col-span-3">
+                                                            <label for="first_name"
+                                                                class="block text-sm font-medium text-gray-700">Razón
+                                                                Social</label>
+                                                            <input type="text" name="razon_social" id="razon_social"
+                                                                autocomplete="given-name"
+                                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-6">
+                                                            <label for="country"
+                                                                class="block text-sm font-medium text-gray-700">Tipo
+                                                                Cliente</label>
+                                                            <select id="Tipo_Cliente" name="Tipo_Cliente"
+                                                                autocomplete="Tipo_Cliente"
+                                                                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                <option>Consumidor Final</option>
+                                                                <option>Gobierno</option>
+                                                                <option>Extranjero</option>
+                                                            </select>
+                                                        </div>
+
+
+                                                        <div class="col-span-6 sm:col-span-6">
+                                                            <label for="first_name"
+                                                                class="block text-sm font-medium text-gray-700">Identificación</label>
+                                                            <div class="flex space-x-2 ">
+                                                                <select id="Persona" name="Persona"
+                                                                    autocomplete="Persona"
+                                                                    class="w-1/3 flex-shrink mt-1 block  py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none
+                                                                     focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                                                    <option>Natural </option>
+                                                                    <option>Jurídica</option>
+
+                                                                </select>
+                                                                <input type="text" name="Identificacion"
+                                                                    id="Identificacion" autocomplete="Identificacion"
+                                                                    class="mt-1 flex flex-grow focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-span-6 sm:col-span-6">
+                                                            <label for="last_name"
+                                                                class="block text-sm font-medium text-gray-700">
+                                                                DV </label>
+                                                            <input type="text" name="DV" id="DV" autocomplete="DV"
+                                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-6">
+                                                            <label for="email_address"
+                                                                class="block text-sm font-medium text-gray-700">Correo
+                                                                electrónico</label>
+                                                            <input type="text" name="email_address" id="email_address"
+                                                                autocomplete="email"
+                                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="px-4 py-3 bg- text-right sm:px-6">
+                                                    <button type="submit"
+                                                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                        Guardar
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
@@ -796,8 +1241,10 @@
                         accept</button> -->
 
 
-                    <button data-modal-toggle="extralarge-modal" type="button"
-                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cerrar</button>
+                    <button data-modal-toggle="Listaclientes" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4
+                         focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5
+                          hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600
+                           dark:focus:ring-gray-600">Cerrar</button>
                 </div>
             </div>
         </div>

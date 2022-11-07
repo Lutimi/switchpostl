@@ -8,11 +8,50 @@
 .scard {
   @apply bg-white rounded p-4 shadow-md;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  --tw-bg-opacity: 1;
+  background: #F5F5F5;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  --tw-bg-opacity: 1;
+ background:  rgb(148, 148, 148);;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
 
 .oc-h-screen {
   max-height: 80vh;
 }
-
+.body::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  display: none;  /* Ocultar scroll */
+}
 .btn1 {
   @apply flex flex-grow text-base px-6  shadow-md py-2  bg-white font-medium hover:bg-primary hover:text-white;
 }
