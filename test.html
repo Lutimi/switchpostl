@@ -18,13 +18,18 @@
 
         <button
             class="block w-full md:w-auto text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800"
-            type="button" data-modal-toggle="extralarge-modal">
+            type="button" data-modal-toggle="listaComprobantes1">
             Comprobante
         </button>
         <button
             class="block w-full md:w-auto text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800"
             type="button" data-modal-toggle="Listaclientes">
             Lista CLiente
+        </button>
+        <button
+            class="block w-full md:w-auto text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800"
+            type="button" data-modal-toggle="listaVendedores">
+            Lista Vendedores
         </button>
     </div>
 
@@ -126,8 +131,8 @@
         </div>
     </div>
 
-    <!-- Large Modal -->
-    <div id="large-modal" tabindex="-1"
+    <!-- Lista vendedores large -->
+    <div id="listaVendedores" tabindex="-1"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center"
         aria-hidden="true">
         <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
@@ -136,11 +141,11 @@
                 <!-- Modal header -->
                 <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
                     <h3 class="text-xl font-medium text-gray-900 dark:text-white">
-                        Large modal
+                        Lista de comprobantes
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-toggle="large-modal">
+                        data-modal-toggle="extralarge-modal">
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -152,31 +157,275 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        With less than a month to go before the European Union enacts new consumer privacy laws for its
-                        citizens, companies around the world are updating their terms of service agreements to comply.
-                    </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25
-                        and is meant to ensure a common set of data rights in the European Union. It requires
-                        organizations to notify users as soon as possible of high-risk data breaches that could
-                        personally affect them.
-                    </p>
+                    <form class="w-1/2">
+                        <div class="flex ">
+                            <label for="search-dropdown"
+                                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">clases</label>
+                            <button id="dropdown-button" data-dropdown-toggle="dropdown3"
+                                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                                type="button">Categorias <svg aria-hidden="true" class="ml-1 w-4 h-4"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg></button>
+                            <div id="dropdown3"
+                                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+                                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top"
+                                style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(897px, 5637px, 0px);">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdown-button">
+                                    <li>
+                                        <button type="button"
+                                            class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pedido</button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pausa</button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Abono</button>
+                                    </li>
+                                    <li>
+                                        <button type="button"
+                                            class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cotizacion</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="relative w-full">
+                                <input type="search" id="search-dropdown"
+                                    class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                                    placeholder="Buscar" required>
+                                <button type="submit" style="background-color: #00B19D;"
+                                    class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-primary rounded-r-lg border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary ">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                    <span class="sr-only">Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="w-full   text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th class="py-3  px-6">
+
+                                    Fecha
+                                </th>
+                                <th class="py-3 px-6  ">
+
+                                    Código </th>
+
+                                </th>
+                                <th class="py-3 px-6  items-center">
+
+                                    Cliente
+
+
+
+                                </th>
+                                <th class="py-3 px-6  ">
+                                    Total </th>
+                                <th class="py-3 px-6 ">
+
+                                    Saldo
+                                </th>
+                                <th class="py-3 px-6 ">
+
+                                    <span class="sr-only">Close</span>
+
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr class="bg-white border-b  dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                                    03-10-2022 09:41:12
+                                </th>
+                                <td class="py-4 px-6 ">
+                                    16-000000608
+                                </td>
+                                <td class="py-4 px-6">
+                                    maria luisa
+                                </td>
+                                <td class="py-4 px-6">
+                                    149
+
+                                </td>
+                                <td class="py-4 px-6">
+                                    0.00
+
+                                </td>
+                                <td class="py-4 px-6 ">
+                                    <button type="button" class="bg-primary rounded-md p-2  text-white hover:text-white
+                    hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <span class="sr-only">Close menu</span>
+                                        <!-- Heroicon name: outline/x -->
+                                        <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b  dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-v  nowrap ">
+                                    03-10-2022 09:41:12
+                                </th>
+                                <td class="py-4 px-6 ">
+                                    16-000000608
+                                </td>
+                                <td class="py-4 px-6">
+                                    maria luisa
+                                </td>
+                                <td class="py-4 px-6">
+                                    149
+
+                                </td>
+                                <td class="py-4 px-6">
+                                    0.00
+
+                                </td>
+                                <td class="py-4 px-6 ">
+                                    <button type="button" class="bg-primary rounded-md p-2  text-white hover:text-white
+                    hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <span class="sr-only">Close menu</span>
+                                        <!-- Heroicon name: outline/x -->
+                                        <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b  dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                                    03-10-2022 09:41:12
+                                </th>
+                                <td class="py-4 px-6 ">
+                                    16-000000608
+                                </td>
+                                <td class="py-4 px-6">
+                                    maria luisa
+                                </td>
+                                <td class="py-4 px-6">
+                                    149
+
+                                </td>
+                                <td class="py-4 px-6">
+                                    0.00
+
+                                </td>
+                                <td class="py-4 px-6 ">
+                                    <button type="button" class="bg-primary rounded-md p-2  text-white hover:text-white
+                    hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <span class="sr-only">Close menu</span>
+                                        <!-- Heroicon name: outline/x -->
+                                        <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b  dark:border-gray-700">
+                                <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                                    03-10-2022 09:41:12
+                                </th>
+                                <td class="py-4 px-6 ">
+                                    16-000000608
+                                </td>
+                                <td class="py-4 px-6">
+                                    maria luisa
+                                </td>
+                                <td class="py-4 px-6">
+                                    149
+
+                                </td>
+                                <td class="py-4 px-6">
+                                    0.00
+
+                                </td>
+                                <td class="py-4 px-6 ">
+                                    <button type="button" class="bg-primary rounded-md p-2  text-white hover:text-white
+                    hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <span class="sr-only">Close menu</span>
+                                        <!-- Heroicon name: outline/x -->
+                                        <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example justify-end">
+                        <ul class="inline-flex -space-x-px">
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-current="page"
+                                    class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
+
+
                 <!-- Modal footer -->
-                <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-                    <button data-modal-toggle="large-modal" type="button"
-                        class="text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800">I
-                        accept</button>
-                    <button data-modal-toggle="large-modal" type="button"
-                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+                <div
+                    class="flex items-end justify-end p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                    <!-- <button data-modal-toggle="extralarge-modal" type="button"
+    class="text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800">I
+    accept</button> -->
+
+
+                    <button data-modal-toggle="extralarge-modal" type="button"
+                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Extra Large COMPROBANTE Modal -->
-    <div id="extralarge-modal" tabindex="-1"
+    <div id="listaComprobantes1" tabindex="-1"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center"
         aria-hidden="true">
         <div class="relative p-4 w-full max-w-5xl h-full md:h-auto">
@@ -188,8 +437,10 @@
                         Lista de comprobantes
                     </h3>
                     <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-toggle="extralarge-modal">
+                        class="text-gray-400 
+                        bg-transparent hover:bg-gray-200 hover:text-gray-900 
+                        rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-toggle="listaComprobantes1">
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -465,7 +716,7 @@
                         accept</button> -->
 
 
-                    <button data-modal-toggle="extralarge-modal" type="button"
+                    <button data-modal-toggle="listaComprobantes1" type="button"
                         class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cerrar</button>
                 </div>
             </div>
@@ -559,26 +810,21 @@
                                     <tr>
                                         <th class="py-3  px-6">
 
-                                            Fecha
+                                            Código
                                         </th>
                                         <th class="py-3 px-6  ">
 
-                                            Código </th>
+                                            Nombre </th>
 
                                         </th>
                                         <th class="py-3 px-6  items-center">
 
-                                            Cliente
+                                            Vendedor
 
 
 
                                         </th>
-                                        <th class="py-3 px-6  ">
-                                            Total </th>
-                                        <th class="py-3 px-6 ">
 
-                                            Saldo
-                                        </th>
                                         <th class="py-3 px-6 ">
 
                                             <span class="sr-only">Close</span>
@@ -592,136 +838,83 @@
 
                                     <tr class="bg-white border-b  dark:border-gray-700">
                                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
-                                            03-10-2022 09:41:12
+                                            00
                                         </th>
                                         <td class="py-4 px-6 ">
-                                            16-000000608
+                                            METRIC ART
                                         </td>
                                         <td class="py-4 px-6">
-                                            maria luisa
+                                            DANIEL
                                         </td>
-                                        <td class="py-4 px-6">
-                                            149
 
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            0.00
-
-                                        </td>
                                         <td class="py-4 px-6 ">
                                             <button type="button"
                                                 class="bg-primary rounded-md p-2  text-white hover:text-white
                                         hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                                 <span class="sr-only">Close menu</span>
                                                 <!-- Heroicon name: outline/x -->
-                                                <svg class="h-4 w-4" class="fill-white xmlns="
-                                                    http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                <svg style="color: white" xmlns="http://www.w3.org/2000/svg" class="h-6"
+                                                    fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                                                        fill="white"></path>
                                                 </svg>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b  dark:border-gray-700">
                                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
-                                            03-10-2022 09:41:12
+                                            00
                                         </th>
                                         <td class="py-4 px-6 ">
-                                            16-000000608
+                                            METRIC ART
                                         </td>
                                         <td class="py-4 px-6">
-                                            maria luisa
+                                            DANIEL
                                         </td>
-                                        <td class="py-4 px-6">
-                                            149
 
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            0.00
-
-                                        </td>
                                         <td class="py-4 px-6 ">
                                             <button type="button"
                                                 class="bg-primary rounded-md p-2  text-white hover:text-white
                                         hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                                 <span class="sr-only">Close menu</span>
                                                 <!-- Heroicon name: outline/x -->
-                                                <svg class="h-4 w-4" class="fill-white xmlns="
-                                                    http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                <svg style="color: white" xmlns="http://www.w3.org/2000/svg" class="h-6"
+                                                    fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                                                        fill="white"></path>
                                                 </svg>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr class="bg-white border-b  dark:border-gray-700">
                                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
-                                            03-10-2022 09:41:12
+                                            00
                                         </th>
                                         <td class="py-4 px-6 ">
-                                            16-000000608
+                                            METRIC ART
                                         </td>
                                         <td class="py-4 px-6">
-                                            maria luisa
+                                            DANIEL
                                         </td>
-                                        <td class="py-4 px-6">
-                                            149
 
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            0.00
-
-                                        </td>
                                         <td class="py-4 px-6 ">
                                             <button type="button"
                                                 class="bg-primary rounded-md p-2  text-white hover:text-white
                                         hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                                 <span class="sr-only">Close menu</span>
                                                 <!-- Heroicon name: outline/x -->
-                                                <svg class="h-4 w-4" class="fill-white xmlns="
-                                                    http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                <svg style="color: white" xmlns="http://www.w3.org/2000/svg" class="h-6"
+                                                    fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                                                        fill="white"></path>
                                                 </svg>
                                             </button>
                                         </td>
                                     </tr>
-                                    <tr class="bg-white border-b  dark:border-gray-700">
-                                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
-                                            03-10-2022 09:41:12
-                                        </th>
-                                        <td class="py-4 px-6 ">
-                                            16-000000608
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            maria luisa
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            149
 
-                                        </td>
-                                        <td class="py-4 px-6">
-                                            0.00
-
-                                        </td>
-                                        <td class="py-4 px-6 ">
-                                            <button type="button"
-                                                class="bg-primary rounded-md p-2  text-white hover:text-white
-                                        hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
-                                                <span class="sr-only">Close menu</span>
-                                                <!-- Heroicon name: outline/x -->
-                                                <svg class="h-4 w-4" class="fill-white xmlns="
-                                                    http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                        </td>
-                                    </tr>
 
 
 
