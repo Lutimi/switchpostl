@@ -59,15 +59,17 @@
   @apply  text-base px-6  shadow-md py-2  bg-white font-medium hover:bg-primary hover:text-white;
 }
 
-.side {
-  width: 400px;
-  height: 72px;
-  background: border-box
-      radial-gradient(transparent 0, transparent 4px, red 4px),
-    padding-box red;
-  background-clip: padding-box red;
-  background-size: 12px 12px;
-  background-position: 6px 0;
-  border-bottom: 6px solid transparent;
-  position: relative;
+.calcbtn {
+  @apply p-6 shadow-md rounded-md font-medium text-xl;
+
+  }
+
+
+  .line-bottom{
+    border-bottom: 1px solid rgba(54, 64, 74, 0.08);
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-clip: padding-box;
+    /*background-color: #fff;*/
 }

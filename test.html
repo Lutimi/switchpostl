@@ -31,6 +31,16 @@
             type="button" data-modal-toggle="listaVendedores">
             Lista Vendedores
         </button>
+        <button
+            class="block w-full md:w-auto text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800"
+            type="button" data-modal-toggle="calc1">
+            calcc
+        </button>
+        <button
+            class="block w-full md:w-auto text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800"
+            type="button" data-modal-toggle="pago1">
+            PAGO de comprobante
+        </button>
     </div>
 
     <!-- Small Modal -->
@@ -83,7 +93,7 @@
     </div>
 
     <!-- Default Modal -->
-    <div id="medium-modal" tabindex="-1"
+    <div id="calc1" tabindex="-1"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center"
         aria-hidden="true">
         <div class="relative p-4 w-full max-w-lg h-full md:h-auto">
@@ -92,11 +102,11 @@
                 <!-- Modal header -->
                 <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
                     <h3 class="text-xl font-medium text-gray-900 dark:text-white">
-                        Default modal
+                        Descuento global
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                        data-modal-toggle="medium-modal">
+                        data-modal-toggle="calc1">
                         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -108,25 +118,81 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-6 space-y-6">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        With less than a month to go before the European Union enacts new consumer privacy laws for its
-                        citizens, companies around the world are updating their terms of service agreements to comply.
-                    </p>
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25
-                        and is meant to ensure a common set of data rights in the European Union. It requires
-                        organizations to notify users as soon as possible of high-risk data breaches that could
-                        personally affect them.
-                    </p>
+                    <div class="flex">
+                        <label for="search-dropdown"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your
+                            Email</label>
+                        <button id="dropdown-button" data-dropdown-toggle="dropdown3" class="flex-shrink-0 justify-center z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium 
+                        text-center text-gray-900 bg-gray-100 border
+             border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 
+             " type="button">% </button>
+
+                        <div class="relative w-full">
+                            <input type="search" id="search-dropdown"
+                                class="block p-4 text-xl w-full z-20  text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300"
+                                placeholder="0" required="">
+
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-6 gap-2">
+                        <button class="calcbtn col-span-2">
+                            1
+                        </button>
+                        <button class="calcbtn col-span-2 ">
+                            2
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            3
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            4
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            5
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            6
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            7
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            8
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            9
+                        </button>
+
+                        <button class="calcbtn col-span-2  ">
+                            .
+                        </button>
+                        <button class="calcbtn col-span-2  ">
+                            0
+                        </button>
+                        <button class="calcbtn col-span-2 bg-[#FFAA00] flex justify-center items-center text-white ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M18 9v2H6l4 4l-1 2l-7-7l7-7l1 2l-4 4h12z" />
+                            </svg></button>
+                        <button class="calcbtn col-span-3 bg-red-600 text-white flex justify-center items-center  ">
+                            <svg aria-hidden="true" class="h-6 w-7 text-white" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="calcbtn col-span-3 flex justify-center items-center bg-green-500 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 text-white"
+                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="m8.818 19.779l-6.364-6.364l2.83-2.83l3.534 3.544l9.898-9.908l2.83 2.83L8.818 19.779Z" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <!-- Modal footer -->
-                <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-                    <button data-modal-toggle="medium-modal" type="button"
-                        class="text-white bg-primary hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-primary dark:focus:ring-blue-800">I
-                        accept</button>
-                    <button data-modal-toggle="medium-modal" type="button"
-                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -1439,6 +1505,216 @@
                           hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600
                            dark:focus:ring-gray-600">Cerrar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Extra Large PagoClientes Modal -->
+    <div id="pago1" tabindex="-1"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center"
+        aria-hidden="true">
+        <div class="relative p-4 w-full max-w-7xl h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="flex w-full bg-white items-center justify-center">
+
+                <div
+                    class="flex flex-col w-full text-gray-700 mx-auto max-w-7xl space-y-4 py-4 shadow-lg px-4 font-medium ">
+                    <div class=" border-b-2 py-2 text-2xl font-medium text-gray-700 ">
+                        PAGO DE COMPROBANTE
+                    </div>
+
+                    <div class="grid grid-cols-8 gap-4">
+
+                        <!-- Primera columna -->
+                        <div class="flex flex-col w-full space-y-2 col-span-8 lg:col-span-4">
+                            <!-- RECIBO -->
+                            <div class="bg-white banner-vertical line-bottom  shadow-xl px-4 py-6 ">
+                                <div class="flex justify-center text-gray-700  pb-4 font-semibold text-lg ">
+                                    <p>
+                                        VISTA PREVIO DE RECIBO
+                                    </p>
+                                </div>
+
+                                <div class=" border-y-2   py-2 text-gray-400 font-medium ">
+                                    6 productos
+                                </div>
+
+                                <!-- PRODCUTOS -->
+                                <div class=" overflow-y-auto  h-64 py-4 space-y-2 text-gray-900">
+
+                                    <!-- PRODUCTO -->
+                                    <div class="flex justify-between">
+                                        <div class="flex space-x-6">
+                                            <p>2</p>
+                                            <p class="">Camiseta</p>
+                                        </div>
+
+                                        <div class="flex space-x-1 font-medium">
+                                            <p>$675.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="flex space-x-6">
+                                            <p>2</p>
+                                            <p class="">Camiseta</p>
+                                        </div>
+
+                                        <div class="flex space-x-1 font-medium">
+
+                                            <p>$675.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="flex space-x-6">
+                                            <p>2</p>
+                                            <p class="">Camiseta</p>
+                                        </div>
+
+                                        <div class="flex space-x-1 font-medium">
+                                            <p>$675.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+
+                                </div>
+
+
+
+                                <!-- SUBTOTAL -->
+                                <div class="flex flex-col space-y-2 border-y-2 py-2">
+                                    <div class="flex justify-between space-y-2">
+                                        <p>
+                                            Subtotal
+                                        </p>
+                                        <div class=" space-x-1 font-medium">
+                                            <p>$675.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <p>
+                                            itbm
+                                        </p>
+                                        <div class=" space-x-1 font-medium">
+                                            <p>$50.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between">
+                                    <p>
+                                        Total
+                                    </p>
+                                    <div class=" space-x-1 font-medium">
+                                        <p>$872.99</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between font-bold text-4xl py-4">
+                                    <p>
+                                        Balance
+                                    </p>
+                                    <div class=" space-x-1 ">
+                                        <p>$872.99</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="flex space-x-2 justify-center items-center">
+                                <label for="small-input"
+                                    class="block  text-base font-medium text-gray-900 dark:text-gray-300">Comentario</label>
+                                <input type="text" id="small-input"
+                                    class="block p-2 w-full text-gray-900 bg-gray-50 rounded-md border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            </div>
+                        </div>
+
+                        <!-- Segunda Columan  -->
+
+
+
+                        <div class="flex flex-col space-y-4 col-span-8 lg:col-span-4 text-gray-600 ">
+                            <div class="flex justify-between items-center ">
+
+                                <label for="large-input"
+                                    class="block text-end text-4xl xl:text-5xl font-medium  ">PAGAR</label>
+                                <input value="$872.99" type="text" id="large-input" class="text-right text-3xl p-2 w-1/2 text-gray-700 bg-gray-50 
+                                    rounded-md flex justify-end border border-gray-300  ">
+                            </div>
+
+                            <div
+                                class="flex  lg:text-xl  flex-wrap  space-y-2 lg:space-y-2  items-end  space-x-2 lg:space-x-2">
+
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    VISA
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    MASTERCARD
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    CERTIFICADO DE REGALO
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    CUENTA POR COBRAR
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    CHEQUE
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    CLAVE
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    TRASNFERENCIA BANCARIA (ACH)
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    EFECTIVO
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    RETENCION DE IMPUESTO
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    VALE DIGITAL
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    COMISIONES ASAP
+                                </button>
+                                <button
+                                    class="bg-primary px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    NOTA DE CREDITO
+                                </button>
+                                <button
+                                    class="bg-red-600 px-4 py-2 text-lg text-white hover:bg-emerald-700  border-md rounded-md">
+                                    Limpiar
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center justify-end p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                        <button data-modal-toggle="pago1" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none
+                             focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5
+                              hover:text-gray-900 focus:z-10">Cerrar</button>
+                        <button type="button" class="text-white bg-primary hover:bg-blue-800 focus:ring-4 
+                        focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5
+                             text-center " data-modal-toggle="pago1">
+                            Terminar</button>
+
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
     </div>
