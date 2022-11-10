@@ -117,8 +117,8 @@
                         <label for="search-dropdown"
                             class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Buscar</label>
                         <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                            class="flex-shrink-0 z-0 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg   0 "
-                            type="button"> <svg class="ml-1 w-4 h-4 fill-gray-700 " xmlns="http://www.w3.org/2000/svg"
+                            class="flex-shrink-0 z-0 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-w bg-gray-600 border border-gray-300 rounded-l-lg   0 "
+                            type="button"> <svg class="ml-1 w-4 h-4 fill-white " xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512">
                                 <path fill-rule="evenodd"
                                     d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z" />
@@ -149,7 +149,7 @@
                         </div>
                         <div class="relative w-full">
                             <input type="search" id="search-dropdown"
-                                class="block p-2.5 w-full  text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-transparent focus:border-emerald-500  "
+                                class="block p-2.5 w-full  text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-transparent focus:border-none  "
                                 placeholder="Buscar" required="">
                             <button type="submit"
                                 class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-amarillo hover:bg-yellow-400 rounded-r-lg border    ">
@@ -598,7 +598,7 @@
                                     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Buscar</label>
                                 <button id="dropdown-button" data-dropdown-toggle=""
                                     class="flex-shrink-0 z-0 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg   0 "
-                                    type="button"> <svg class="ml-1 w-4 h-4 fill-gray-700 "
+                                    type="button"> <svg class="ml-1 w-4 h-4 border-none fill-gray-700 "
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -609,7 +609,7 @@
 
                                 <div class="relative w-full">
                                     <input type="search" id="search-dropdown"
-                                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-transparent focus:ring-primary  "
+                                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:border-none  "
                                         placeholder="Maria  Luisa" required="">
                                     <button data-modal-toggle="Listaclientes" type="submit"
                                         class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-amarillo hover:bg-yellow-400 rounded-r-lg border    ">
@@ -1636,6 +1636,7 @@
                                                         </div>
                                                         <div class="relative w-full">
                                                             <input type="search" id="search-dropdown"
+                                                                data-modal-toggle="calc"
                                                                 class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
                                                                 placeholder="Buscar" required>
                                                             <button type="submit"
@@ -1892,7 +1893,7 @@ accept</button> -->
                                         <div>
 
 
-                                            <input
+                                            <input data-modal-toggle="calc"
                                                 class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                                 type="text " value="4">
                                         </div>
@@ -1901,12 +1902,12 @@ accept</button> -->
                                         Samsung Galaxy S5
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="50">
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="4 ">
                                     </td>
@@ -1917,9 +1918,52 @@ accept</button> -->
                                         8%
                                     </td>
                                     <td class="py-4 px-6 text-right">
-                                        <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <button type="button" data-modal-toggle="calc"
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                            <!-- Heroicon name: outline/x -->
+                                            <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b  dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                                        <div>
+
+
+                                            <input
+                                                class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
+                                                type="text " value="4">
+                                        </div>
+                                    </th>
+                                    <td class="py-4 px-6 flex justify-center">
+                                        Samsung Galaxy S5
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        <input data-modal-toggle="calc"
+                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
+                                            type="text " value="50">
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        <input data-modal-toggle="calc"
+                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
+                                            type="text " value="4 ">
+                                    </td>
+                                    <td class="py-4 px-6 flex justify-center">
+                                        $200.00
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        8%
+                                    </td>
+                                    <td class="py-4 px-6 text-right">
+                                        <button type="button" data-modal-toggle="calc"
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                             <span class="sr-only">Close menu</span>
                                             <!-- Heroicon name: outline/x -->
                                             <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
@@ -1945,12 +1989,12 @@ accept</button> -->
                                         Samsung Galaxy S5
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="50">
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="4 ">
                                     </td>
@@ -1961,53 +2005,9 @@ accept</button> -->
                                         8%
                                     </td>
                                     <td class="py-4 px-6 text-right">
-                                        <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
-                                            <span class="sr-only">Close menu</span>
-                                            <!-- Heroicon name: outline/x -->
-                                            <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr class="bg-white border-b  dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
-                                        <div>
-
-
-                                            <input
-                                                class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
-                                                type="text " value="4">
-                                        </div>
-                                    </th>
-                                    <td class="py-4 px-6 flex justify-center">
-                                        Samsung Galaxy S5
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        <input
-                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
-                                            type="text " value="50">
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        <input
-                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
-                                            type="text " value="4 ">
-                                    </td>
-                                    <td class="py-4 px-6 flex justify-center">
-                                        $200.00
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        8%
-                                    </td>
-                                    <td class="py-4 px-6 text-right">
-                                        <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <button type="button" data-modal-toggle="calc"
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                             <span class="sr-only">Close menu</span>
                                             <!-- Heroicon name: outline/x -->
                                             <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
@@ -2036,12 +2036,12 @@ accept</button> -->
                                         Samsung Galaxy S5
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="50">
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="4 ">
                                     </td>
@@ -2052,9 +2052,9 @@ accept</button> -->
                                         8%
                                     </td>
                                     <td class="py-4 px-6 text-right">
-                                        <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                        <button type="button" data-modal-toggle="calc"
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                             <span class="sr-only">Close menu</span>
                                             <!-- Heroicon name: outline/x -->
                                             <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
@@ -2082,12 +2082,12 @@ accept</button> -->
                                         Samsung Galaxy S5
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="50">
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="4 ">
                                     </td>
@@ -2099,53 +2099,8 @@ accept</button> -->
                                     </td>
                                     <td class="py-4 px-6 text-right">
                                         <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
-                                            <span class="sr-only">Close menu</span>
-                                            <!-- Heroicon name: outline/x -->
-                                            <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <tr class="bg-white border-b  dark:border-gray-700">
-                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
-                                        <div>
-
-
-                                            <input
-                                                class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
-                                                type="text " value="4">
-                                        </div>
-                                    </th>
-                                    <td class="py-4 px-6 flex justify-center">
-                                        Samsung Galaxy S5
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        <input
-                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
-                                            type="text " value="50">
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        <input
-                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
-                                            type="text " value="4 ">
-                                    </td>
-                                    <td class="py-4 px-6 flex justify-center">
-                                        $200.00
-                                    </td>
-                                    <td class="py-4 px-6">
-                                        8%
-                                    </td>
-                                    <td class="py-4 px-6 text-right">
-                                        <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                             <span class="sr-only">Close menu</span>
                                             <!-- Heroicon name: outline/x -->
                                             <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
@@ -2172,12 +2127,12 @@ accept</button> -->
                                         Samsung Galaxy S5
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="50">
                                     </td>
                                     <td class="py-4 px-6">
-                                        <input
+                                        <input data-modal-toggle="calc"
                                             class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
                                             type="text " value="4 ">
                                     </td>
@@ -2189,8 +2144,53 @@ accept</button> -->
                                     </td>
                                     <td class="py-4 px-6 text-right">
                                         <button type="button"
-                                            class="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-white
-                                            hover:bg-red-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
+                                            <span class="sr-only">Close menu</span>
+                                            <!-- Heroicon name: outline/x -->
+                                            <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-white border-b  dark:border-gray-700">
+                                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap ">
+                                        <div>
+
+
+                                            <input
+                                                class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
+                                                type="text " value="4">
+                                        </div>
+                                    </th>
+                                    <td class="py-4 px-6 flex justify-center">
+                                        Samsung Galaxy S5
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        <input data-modal-toggle="calc"
+                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
+                                            type="text " value="50">
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        <input data-modal-toggle="calc"
+                                            class=" bg-gray-50 w-full lg:px-2 border rounded ring-blue-300 focus:border-blue-500 focus:ring-blue-500 border-gray-300 py-1   text-center"
+                                            type="text " value="4 ">
+                                    </td>
+                                    <td class="py-4 px-6 flex justify-center">
+                                        $200.00
+                                    </td>
+                                    <td class="py-4 px-6">
+                                        8%
+                                    </td>
+                                    <td class="py-4 px-6 text-right">
+                                        <button type="button"
+                                            class="bg-white rounded-md p-1 border-gray-300 border inline-flex items-center justify-center text-gray-600 hover:text-white
+                                            hover:bg-red-700 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-inherit">
                                             <span class="sr-only">Close menu</span>
                                             <!-- Heroicon name: outline/x -->
                                             <svg class="h-4 w-4" class="fill-white xmlns=" http://www.w3.org/2000/svg"
