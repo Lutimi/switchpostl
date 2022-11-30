@@ -1,5 +1,6 @@
 {
     "marquee.widgets.npm-stats.packageNames": [
         "switchpostl"
-    ]
+    ],
+    "liveServer.settings.port": 5502
 }
